@@ -1,13 +1,11 @@
 package solvers
 
-
-// I
-private case class FoldAcc(isValid: Boolean, increase: Int)
-
 object Exercise2Solver extends Solver {
   private val maxNumberDistance = 3
   private val minNumberDistance = 1
 
+  private case class FoldAcc(isValid: Boolean, increase: Int)
+  
   override def solve(lines: Seq[String]): Int = {
     val numberMatrix = lines.map(line => {
       val numParts = line.split(" +")
