@@ -1,12 +1,12 @@
 package solvers
 
-trait Solver {
+trait ExerciseSolver {
   def solve(lines: Seq[String]): Int
 }
 
-object Solver {
+object ExerciseSolver {
 
-  def apply(exercise: Int): Solver = {
+  def apply(exercise: Int): ExerciseSolver = {
     exercise match
       case 1 => Exercise1Solver
       case 2 => Exercise2Solver

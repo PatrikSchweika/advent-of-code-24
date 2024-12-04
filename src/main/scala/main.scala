@@ -1,4 +1,4 @@
-import solvers.Solver
+import solvers.ExerciseSolver
 
 import java.nio.file.{Files, Paths}
 import scala.io.Source
@@ -15,7 +15,7 @@ def main(fileName: String, exercise: Int): Unit =
 
   source.close()
 
-  val solver = Solver(exercise)
+  val solver = ExerciseSolver(exercise)
   val solution = solver.solve(lines)
 
   println(s"Solution: $solution")

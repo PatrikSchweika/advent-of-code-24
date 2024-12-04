@@ -2,7 +2,7 @@ package solvers
 
 import scala.collection.mutable
 
-object Exercise1Solver extends Solver {
+object Exercise1Solver extends ExerciseSolver {
   override def solve(lines: Seq[String]): Int = {
     val leftNumbers = mutable.PriorityQueue[Int]()
     val rightNumbers = mutable.PriorityQueue[Int]()

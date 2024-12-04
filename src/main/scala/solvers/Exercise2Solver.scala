@@ -1,6 +1,6 @@
 package solvers
 
-object Exercise2Solver extends Solver {
+object Exercise2Solver extends ExerciseSolver {
   private val maxNumberDistance = 3
   private val minNumberDistance = 1
 
