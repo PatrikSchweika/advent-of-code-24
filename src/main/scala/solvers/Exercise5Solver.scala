@@ -1,8 +1,7 @@
 package solvers
 
-private case class OrderingAcc(set: Set[Int], valid: Boolean)
-
 object Exercise5Solver extends ExerciseSolver:
+  private case class OrderingAcc(set: Set[Int], valid: Boolean)
 
   private def isInCorrectOrder(update: Seq[Int], ordering: Seq[(Int, Int)]): Boolean = {
     val acc = OrderingAcc(Set(), true)
@@ -31,7 +30,6 @@ object Exercise5Solver extends ExerciseSolver:
         val groups = line.split('|')
 
         ordering = ordering.appended((groups(0).toInt, groups(1).toInt))
-
       }
       else if (line.contains(',')) {
         val groups = line.split(',')
