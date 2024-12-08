@@ -14,6 +14,7 @@ class ExerciseSolverTest extends AnyFunSuite {
     (4, "./files/test/exercise-4.txt", 18),
     (5, "./files/test/exercise-5.txt", 143),
     (6, "./files/test/exercise-6.txt", 41),
+    (7, "./files/test/exercise-7.txt", 3749),
   )
 
   test("Exercise tests") {
