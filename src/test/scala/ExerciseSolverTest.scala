@@ -1,21 +1,23 @@
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.prop.TableDrivenPropertyChecks.forAll
 import org.scalatest.prop.Tables.Table
-import solvers.{Exercise1Solver, Exercise2Solver, Exercise3Solver, Exercise4Solver}
+import solvers.ExerciseSolver
 
 import scala.io.Source
 
 class ExerciseSolverTest extends AnyFunSuite {
   private val testCases = Table(
-    ("Solver", "fileName", "expectedResult"),
-    (Exercise1Solver, "./files/test/exercise-1.txt", 11),
-    (Exercise2Solver, "./files/test/exercise-2.txt", 2),
-    (Exercise3Solver, "./files/test/exercise-3.txt", 161),
-    (Exercise4Solver, "./files/test/exercise-4.txt", 18),
+    ("Exercise", "fileName", "expectedResult"),
+    (1, "./files/test/exercise-1.txt", 11),
+    (2, "./files/test/exercise-2.txt", 2),
+    (3, "./files/test/exercise-3.txt", 161),
+    (4, "./files/test/exercise-4.txt", 18),
+    (5, "./files/test/exercise-5.txt", 143),
   )
 
   test("Exercise tests") {
-    forAll(testCases) { (solver, fileName, expectedResult) =>
+    forAll(testCases) { (exercise, fileName, expectedResult) =>
+      val solver = ExerciseSolver(exercise)
       val source = Source.fromFile(fileName)
       val lines = source.getLines.toList
 

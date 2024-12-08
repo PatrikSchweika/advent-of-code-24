@@ -12,6 +12,7 @@ object ExerciseSolver {
       case 2 => Exercise2Solver
       case 3 => Exercise3Solver
       case 4 => Exercise4Solver
+      case 5 => Exercise5Solver
       case _ => throw new IllegalArgumentException(s"Solver for exercise $exercise does not exists")
   }
 }
