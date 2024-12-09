@@ -58,7 +58,7 @@ object Exercise4Solver extends ExerciseSolver:
     )
   }
 
-  override def solve(lines: Seq[String]): Int = {
+  override def solve(lines: Seq[String]): Number = {
     var words = 0
     
     for (i <- lines.indices) {

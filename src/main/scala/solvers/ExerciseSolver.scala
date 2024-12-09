@@ -1,7 +1,7 @@
 package solvers
 
 trait ExerciseSolver {
-  def solve(lines: Seq[String]): Int
+  def solve(lines: Seq[String]): Number
 }
 
 object ExerciseSolver {

@@ -21,7 +21,7 @@ object Exercise5Solver extends ExerciseSolver:
     result.valid
   }
 
-  override def solve(lines: Seq[String]): Int = {
+  override def solve(lines: Seq[String]): Number = {
     var ordering: Seq[(Int, Int)] = Seq()
     var updates: Seq[Seq[Int]] = Seq()
 

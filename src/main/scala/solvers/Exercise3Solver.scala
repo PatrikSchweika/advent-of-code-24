@@ -5,7 +5,7 @@ import scala.util.matching.Regex
 object Exercise3Solver extends ExerciseSolver:
   val mulPattern: Regex = """mul\(([0-9]{1,3}),([0-9]{1,3})\)""".r
 
-  override def solve(lines: Seq[String]): Int = {
+  override def solve(lines: Seq[String]): Number = {
     val str = lines.mkString
 
     mulPattern.findAllMatchIn(str).foldLeft(0)((sum, m) => {

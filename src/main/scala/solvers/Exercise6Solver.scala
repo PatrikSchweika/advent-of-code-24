@@ -32,7 +32,7 @@ object Exercise6Solver extends ExerciseSolver:
     }
   }
 
-  override def solve(lines: Seq[String]): Int = {
+  override def solve(lines: Seq[String]): Number = {
     val position = getGuardPosition(lines)
     val direction = Point(0, -1)
 

@@ -6,7 +6,7 @@ object Exercise2Solver extends ExerciseSolver {
 
   private case class FoldAcc(isValid: Boolean, increase: Int)
   
-  override def solve(lines: Seq[String]): Int = {
+  override def solve(lines: Seq[String]): Number = {
     val numberMatrix = lines.map(line => {
       val numParts = line.split(" +")
 
